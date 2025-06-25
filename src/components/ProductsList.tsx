@@ -48,7 +48,7 @@ const ProductsList = () => {
         הוסף מוצר
       </Button>
       {showForm && <ProductForm onClose={() => setShowForm(false)} />}
-      <Grid container spacing={2} sx={{ mt: 2 }}>
+      <Grid container spacing={4} sx={{ mt: 2 }}>
         {products.map((product) => (
           <Grid {...{ item: true, xs: 12, sm: 6, md: 4 }} key={product.id}>
             <ProductCard product={product} />
