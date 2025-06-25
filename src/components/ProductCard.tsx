@@ -6,10 +6,10 @@ import { Product } from "../store/Slices/productsSlice";
 const ProductCard = ({ product }: { product: Product }) => {
       const navigate = useNavigate();
   return (
- <Card onClick={() => navigate(`/product/${product.id}`)} sx={{ cursor: "pointer", width: 200 }}>
+ <Card onClick={() => navigate(`/product/${product.id}`)} sx={{ cursor: "pointer", width: 300 }}>
       <CardMedia
         component="img"
-        height="140"
+        height="300"
         image="/assets/product.jpg" 
         alt="product"
       />
