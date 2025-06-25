@@ -1,9 +1,23 @@
 import React from 'react'
+import { Card, CardMedia, CardContent, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Product } from "../store/Slices/productsSlice";
 
-const ProductCard = () => {
+const ProductCard = ({ product }: { product: Product }) => {
+      const navigate = useNavigate();
   return (
-    <div>ProductCard</div>
-  )
+ <Card onClick={() => navigate(`/product/${product.id}`)} sx={{ cursor: "pointer", width: 200 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image="../assets/product.jpg" 
+        alt="product"
+      />
+      <CardContent>
+        <Typography variant="h6">{product.name}</Typography>
+      </CardContent>
+    </Card>  )
 }
 
 export default ProductCard
+
